@@ -1,0 +1,10 @@
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\bin\ArticulateSSO.dll.config
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\bin\ArticulateSSO.dll
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\bin\ArticulateSSO.XmlSerializers.dll
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\bin\ArticulateSSO.pdb
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Release\ArticulateSSO.Resources.resources
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Release\ArticulateSSO.vbproj.GenerateResource.cache
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Release\ArticulateSSO.vbproj.CoreCompileInputs.cache
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Release\ArticulateSSO.dll
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Release\ArticulateSSO.pdb
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Release\ArticulateSSO.XmlSerializers.dll

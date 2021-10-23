@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.articulate-online.com/services/api/1.0/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.articulate-online.com/services/api/1.0/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.articulate-online.com/services/api/1.0/">
+      <s:element name="CreateUsersRequest" nillable="true" type="tns:CreateUsersRequest" />
+      <s:complexType name="CreateUsersRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="Emails" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutoGeneratePassword" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendLoginEmail" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalComment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MemberOfGroupIDs" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Credentials">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateUsersResult" type="tns:CreateUsersResponse" />
+      <s:complexType name="CreateUsersResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserIDs" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteUserRequest" nillable="true" type="tns:DeleteUserRequest" />
+      <s:complexType name="DeleteUserRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteUserResult" type="tns:DeleteUserResponse" />
+      <s:complexType name="DeleteUserResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserProfileRequest" nillable="true" type="tns:UpdateUserProfileRequest" />
+      <s:complexType name="UpdateUserProfileRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cell" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserProfileResult" type="tns:UpdateUserProfileResponse" />
+      <s:complexType name="UpdateUserProfileResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetUserPasswordRequest" nillable="true" type="tns:SetUserPasswordRequest" />
+      <s:complexType name="SetUserPasswordRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetUserPasswordResult" type="tns:SetUserPasswordResponse" />
+      <s:complexType name="SetUserPasswordResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserInformationRequest" nillable="true" type="tns:GetUserInformationRequest" />
+      <s:complexType name="GetUserInformationRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserInformationResult" type="tns:GetUserInformationResponse" />
+      <s:complexType name="GetUserInformationResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Profile" type="tns:UserProfile" />
+          <s:element minOccurs="0" maxOccurs="1" name="MemberOfGroupIDs" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserProfile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cell" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListUsersRequest" nillable="true" type="tns:ListUsersRequest" />
+      <s:complexType name="ListUsersRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListUsersResult" type="tns:ListUsersResponse" />
+      <s:complexType name="ListUsersResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Profiles" type="tns:ArrayOfUserProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUserProfile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserProfile" nillable="true" type="tns:UserProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateGroupRequest" nillable="true" type="tns:CreateGroupRequest" />
+      <s:complexType name="CreateGroupRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateGroupResult" type="tns:CreateGroupResponse" />
+      <s:complexType name="CreateGroupResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteGroupRequest" nillable="true" type="tns:DeleteGroupRequest" />
+      <s:complexType name="DeleteGroupRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteGroupResult" type="tns:DeleteGroupResponse" />
+      <s:complexType name="DeleteGroupResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateGroupRequest" nillable="true" type="tns:UpdateGroupRequest" />
+      <s:complexType name="UpdateGroupRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateGroupResult" type="tns:UpdateGroupResponse" />
+      <s:complexType name="UpdateGroupResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroupInformationRequest" nillable="true" type="tns:GetGroupInformationRequest" />
+      <s:complexType name="GetGroupInformationRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroupInformationResult" type="tns:GetGroupInformationResponse" />
+      <s:complexType name="GetGroupInformationResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group" type="tns:GroupSummary" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMemberIDs" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GroupSummary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListGroupsRequest" nillable="true" type="tns:ListGroupsRequest" />
+      <s:complexType name="ListGroupsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListGroupsResult" type="tns:ListGroupsResponse" />
+      <s:complexType name="ListGroupsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Groups" type="tns:ArrayOfGroupSummary" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGroupSummary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GroupSummary" nillable="true" type="tns:GroupSummary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddUserToGroupRequest" nillable="true" type="tns:AddUserToGroupRequest" />
+      <s:complexType name="AddUserToGroupRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddUserToGroupResult" type="tns:AddUserToGroupResponse" />
+      <s:complexType name="AddUserToGroupResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RemoveUserFromGroupRequest" nillable="true" type="tns:RemoveUserFromGroupRequest" />
+      <s:complexType name="RemoveUserFromGroupRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RemoveUserFromGroupResult" type="tns:RemoveUserFromGroupResponse" />
+      <s:complexType name="RemoveUserFromGroupResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetReportingGroupsRequest" nillable="true" type="tns:SetReportingGroupsRequest" />
+      <s:complexType name="SetReportingGroupsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupList" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetReportingGroupsResult" type="tns:SetReportingGroupsResponse" />
+      <s:complexType name="SetReportingGroupsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReportingGroupsRequest" nillable="true" type="tns:GetReportingGroupsRequest" />
+      <s:complexType name="GetReportingGroupsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReportingGroupsResult" type="tns:GetReportingGroupsResponse" />
+      <s:complexType name="GetReportingGroupsResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReportingGroups" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetReportingGroupListRequest" nillable="true" type="tns:SetReportingGroupListRequest" />
+      <s:complexType name="SetReportingGroupListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupList" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetReportingGroupListResult" type="tns:SetReportingGroupListResponse" />
+      <s:complexType name="SetReportingGroupListResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddUserToReportingGroupRequest" nillable="true" type="tns:AddUserToReportingGroupRequest" />
+      <s:complexType name="AddUserToReportingGroupRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddUserToReportingGroupResult" type="tns:AddUserToReportingGroupResponse" />
+      <s:complexType name="AddUserToReportingGroupResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RemoveUserFromReportingGroupRequest" nillable="true" type="tns:RemoveUserFromReportingGroupRequest" />
+      <s:complexType name="RemoveUserFromReportingGroupRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RemoveUserFromReportingGroupResult" type="tns:RemoveUserFromReportingGroupResponse" />
+      <s:complexType name="RemoveUserFromReportingGroupResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListDocumentsRequest" nillable="true" type="tns:ListDocumentsRequest" />
+      <s:complexType name="ListDocumentsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListDocumentsResult" type="tns:ListDocumentsResponse" />
+      <s:complexType name="ListDocumentsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documents" type="tns:ArrayOfDocumentSummary" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocumentSummary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentSummary" nillable="true" type="tns:DocumentSummary" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentSummary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDocumentSecurityRequest" nillable="true" type="tns:GetDocumentSecurityRequest" />
+      <s:complexType name="GetDocumentSecurityRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDocumentSecurityResult" type="tns:GetDocumentSecurityResponse" />
+      <s:complexType name="GetDocumentSecurityResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrivacyOption" type="tns:PrivacyOption" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllowedAccountIDs" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PrivacyOption">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Public" />
+          <s:enumeration value="Private" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UpdateDocumentSecurityRequest" nillable="true" type="tns:UpdateDocumentSecurityRequest" />
+      <s:complexType name="UpdateDocumentSecurityRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrivacyOption" type="tns:PrivacyOption" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllowedAccountIDs" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateDocumentSecurityResult" type="tns:UpdateDocumentSecurityResponse" />
+      <s:complexType name="UpdateDocumentSecurityResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InviteUsersRequest" nillable="true" type="tns:InviteUsersRequest" />
+      <s:complexType name="InviteUsersRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserIDs" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupIDs" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddresses" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalComment" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InviteUsersResult" type="tns:InviteUsersResponse" />
+      <s:complexType name="InviteUsersResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AutoLoginRequest" nillable="true" type="tns:AutoLoginRequest" />
+      <s:complexType name="AutoLoginRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="tns:Credentials" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AutoLoginResponse" nillable="true" type="tns:AutoLoginResponse" />
+      <s:complexType name="AutoLoginResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateUsersSoapIn">
+    <wsdl:part name="request" element="tns:CreateUsersRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateUsersSoapOut">
+    <wsdl:part name="CreateUsersResult" element="tns:CreateUsersResult" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapIn">
+    <wsdl:part name="request" element="tns:DeleteUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapOut">
+    <wsdl:part name="DeleteUserResult" element="tns:DeleteUserResult" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserProfileSoapIn">
+    <wsdl:part name="request" element="tns:UpdateUserProfileRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserProfileSoapOut">
+    <wsdl:part name="UpdateUserProfileResult" element="tns:UpdateUserProfileResult" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordSoapIn">
+    <wsdl:part name="request" element="tns:SetUserPasswordRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordSoapOut">
+    <wsdl:part name="SetUserPasswordResult" element="tns:SetUserPasswordResult" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInformationSoapIn">
+    <wsdl:part name="request" element="tns:GetUserInformationRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInformationSoapOut">
+    <wsdl:part name="GetUserInformationResult" element="tns:GetUserInformationResult" />
+  </wsdl:message>
+  <wsdl:message name="ListUsersSoapIn">
+    <wsdl:part name="request" element="tns:ListUsersRequest" />
+  </wsdl:message>
+  <wsdl:message name="ListUsersSoapOut">
+    <wsdl:part name="ListUsersResult" element="tns:ListUsersResult" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupSoapIn">
+    <wsdl:part name="request" element="tns:CreateGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupSoapOut">
+    <wsdl:part name="CreateGroupResult" element="tns:CreateGroupResult" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupSoapIn">
+    <wsdl:part name="request" element="tns:DeleteGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupSoapOut">
+    <wsdl:part name="DeleteGroupResult" element="tns:DeleteGroupResult" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupSoapIn">
+    <wsdl:part name="request" element="tns:UpdateGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupSoapOut">
+    <wsdl:part name="UpdateGroupResult" element="tns:UpdateGroupResult" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupInformationSoapIn">
+    <wsdl:part name="request" element="tns:GetGroupInformationRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupInformationSoapOut">
+    <wsdl:part name="GetGroupInformationResult" element="tns:GetGroupInformationResult" />
+  </wsdl:message>
+  <wsdl:message name="ListGroupsSoapIn">
+    <wsdl:part name="request" element="tns:ListGroupsRequest" />
+  </wsdl:message>
+  <wsdl:message name="ListGroupsSoapOut">
+    <wsdl:part name="ListGroupsResult" element="tns:ListGroupsResult" />
+  </wsdl:message>
+  <wsdl:message name="AddUserToGroupSoapIn">
+    <wsdl:part name="request" element="tns:AddUserToGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddUserToGroupSoapOut">
+    <wsdl:part name="AddUserToGroupResult" element="tns:AddUserToGroupResult" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserFromGroupSoapIn">
+    <wsdl:part name="request" element="tns:RemoveUserFromGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserFromGroupSoapOut">
+    <wsdl:part name="RemoveUserFromGroupResult" element="tns:RemoveUserFromGroupResult" />
+  </wsdl:message>
+  <wsdl:message name="SetReportingGroupsSoapIn">
+    <wsdl:part name="request" element="tns:SetReportingGroupsRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetReportingGroupsSoapOut">
+    <wsdl:part name="SetReportingGroupsResult" element="tns:SetReportingGroupsResult" />
+  </wsdl:message>
+  <wsdl:message name="GetReportingGroupsSoapIn">
+    <wsdl:part name="request" element="tns:GetReportingGroupsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetReportingGroupsSoapOut">
+    <wsdl:part name="GetReportingGroupsResult" element="tns:GetReportingGroupsResult" />
+  </wsdl:message>
+  <wsdl:message name="SetReportingGroupListSoapIn">
+    <wsdl:part name="request" element="tns:SetReportingGroupListRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetReportingGroupListSoapOut">
+    <wsdl:part name="SetReportingGroupListResult" element="tns:SetReportingGroupListResult" />
+  </wsdl:message>
+  <wsdl:message name="AddUserToReportingGroupSoapIn">
+    <wsdl:part name="request" element="tns:AddUserToReportingGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddUserToReportingGroupSoapOut">
+    <wsdl:part name="AddUserToReportingGroupResult" element="tns:AddUserToReportingGroupResult" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserFromReportingGroupSoapIn">
+    <wsdl:part name="request" element="tns:RemoveUserFromReportingGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserFromReportingGroupSoapOut">
+    <wsdl:part name="RemoveUserFromReportingGroupResult" element="tns:RemoveUserFromReportingGroupResult" />
+  </wsdl:message>
+  <wsdl:message name="ListDocumentsSoapIn">
+    <wsdl:part name="request" element="tns:ListDocumentsRequest" />
+  </wsdl:message>
+  <wsdl:message name="ListDocumentsSoapOut">
+    <wsdl:part name="ListDocumentsResult" element="tns:ListDocumentsResult" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentSecuritySoapIn">
+    <wsdl:part name="request" element="tns:GetDocumentSecurityRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentSecuritySoapOut">
+    <wsdl:part name="GetDocumentSecurityResult" element="tns:GetDocumentSecurityResult" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDocumentSecuritySoapIn">
+    <wsdl:part name="request" element="tns:UpdateDocumentSecurityRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDocumentSecuritySoapOut">
+    <wsdl:part name="UpdateDocumentSecurityResult" element="tns:UpdateDocumentSecurityResult" />
+  </wsdl:message>
+  <wsdl:message name="InviteUsersSoapIn">
+    <wsdl:part name="request" element="tns:InviteUsersRequest" />
+  </wsdl:message>
+  <wsdl:message name="InviteUsersSoapOut">
+    <wsdl:part name="InviteUsersResult" element="tns:InviteUsersResult" />
+  </wsdl:message>
+  <wsdl:message name="GetAutoLoginUrlSoapIn">
+    <wsdl:part name="request" element="tns:AutoLoginRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetAutoLoginUrlSoapOut">
+    <wsdl:part name="GetAutoLoginUrlResult" element="tns:AutoLoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ArticulateOnlineSoap">
+    <wsdl:operation name="CreateUsers">
+      <wsdl:input message="tns:CreateUsersSoapIn" />
+      <wsdl:output message="tns:CreateUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input message="tns:DeleteUserSoapIn" />
+      <wsdl:output message="tns:DeleteUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserProfile">
+      <wsdl:input message="tns:UpdateUserProfileSoapIn" />
+      <wsdl:output message="tns:UpdateUserProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <wsdl:input message="tns:SetUserPasswordSoapIn" />
+      <wsdl:output message="tns:SetUserPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation">
+      <wsdl:input message="tns:GetUserInformationSoapIn" />
+      <wsdl:output message="tns:GetUserInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUsers">
+      <wsdl:input message="tns:ListUsersSoapIn" />
+      <wsdl:output message="tns:ListUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <wsdl:input message="tns:CreateGroupSoapIn" />
+      <wsdl:output message="tns:CreateGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <wsdl:input message="tns:DeleteGroupSoapIn" />
+      <wsdl:output message="tns:DeleteGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroup">
+      <wsdl:input message="tns:UpdateGroupSoapIn" />
+      <wsdl:output message="tns:UpdateGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupInformation">
+      <wsdl:input message="tns:GetGroupInformationSoapIn" />
+      <wsdl:output message="tns:GetGroupInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListGroups">
+      <wsdl:input message="tns:ListGroupsSoapIn" />
+      <wsdl:output message="tns:ListGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroup">
+      <wsdl:input message="tns:AddUserToGroupSoapIn" />
+      <wsdl:output message="tns:AddUserToGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroup">
+      <wsdl:input message="tns:RemoveUserFromGroupSoapIn" />
+      <wsdl:output message="tns:RemoveUserFromGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetReportingGroups">
+      <wsdl:input message="tns:SetReportingGroupsSoapIn" />
+      <wsdl:output message="tns:SetReportingGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportingGroups">
+      <wsdl:input message="tns:GetReportingGroupsSoapIn" />
+      <wsdl:output message="tns:GetReportingGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetReportingGroupList">
+      <wsdl:input message="tns:SetReportingGroupListSoapIn" />
+      <wsdl:output message="tns:SetReportingGroupListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToReportingGroup">
+      <wsdl:input message="tns:AddUserToReportingGroupSoapIn" />
+      <wsdl:output message="tns:AddUserToReportingGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromReportingGroup">
+      <wsdl:input message="tns:RemoveUserFromReportingGroupSoapIn" />
+      <wsdl:output message="tns:RemoveUserFromReportingGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDocuments">
+      <wsdl:input message="tns:ListDocumentsSoapIn" />
+      <wsdl:output message="tns:ListDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentSecurity">
+      <wsdl:input message="tns:GetDocumentSecuritySoapIn" />
+      <wsdl:output message="tns:GetDocumentSecuritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentSecurity">
+      <wsdl:input message="tns:UpdateDocumentSecuritySoapIn" />
+      <wsdl:output message="tns:UpdateDocumentSecuritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InviteUsers">
+      <wsdl:input message="tns:InviteUsersSoapIn" />
+      <wsdl:output message="tns:InviteUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoLoginUrl">
+      <wsdl:input message="tns:GetAutoLoginUrlSoapIn" />
+      <wsdl:output message="tns:GetAutoLoginUrlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ArticulateOnlineSoap" type="tns:ArticulateOnlineSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUsers">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/CreateUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserProfile">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/UpdateUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/SetUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetUserInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUsers">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/ListUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/CreateGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/DeleteGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroup">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/UpdateGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupInformation">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetGroupInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListGroups">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/ListGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroup">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/AddUserToGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroup">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/RemoveUserFromGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReportingGroups">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/SetReportingGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportingGroups">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetReportingGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReportingGroupList">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/SetReportingGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToReportingGroup">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/AddUserToReportingGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromReportingGroup">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/RemoveUserFromReportingGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDocuments">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/ListDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentSecurity">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetDocumentSecurity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentSecurity">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/UpdateDocumentSecurity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InviteUsers">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/InviteUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoLoginUrl">
+      <soap:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetAutoLoginUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ArticulateOnlineSoap12" type="tns:ArticulateOnlineSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUsers">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/CreateUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserProfile">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/UpdateUserProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/SetUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetUserInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUsers">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/ListUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/CreateGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/DeleteGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroup">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/UpdateGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupInformation">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetGroupInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListGroups">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/ListGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroup">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/AddUserToGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroup">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/RemoveUserFromGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReportingGroups">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/SetReportingGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportingGroups">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetReportingGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReportingGroupList">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/SetReportingGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToReportingGroup">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/AddUserToReportingGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromReportingGroup">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/RemoveUserFromReportingGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDocuments">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/ListDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentSecurity">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetDocumentSecurity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentSecurity">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/UpdateDocumentSecurity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InviteUsers">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/InviteUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoLoginUrl">
+      <soap12:operation soapAction="http://www.articulate-online.com/services/api/1.0/GetAutoLoginUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ArticulateOnline">
+    <wsdl:port name="ArticulateOnlineSoap" binding="tns:ArticulateOnlineSoap">
+      <soap:address location="https://articulate-online.com/services/api/1.0/ArticulateOnline.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ArticulateOnlineSoap12" binding="tns:ArticulateOnlineSoap12">
+      <soap12:address location="https://articulate-online.com/services/api/1.0/ArticulateOnline.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

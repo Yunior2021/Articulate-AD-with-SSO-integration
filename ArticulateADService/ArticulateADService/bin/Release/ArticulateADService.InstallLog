@@ -1,0 +1,198 @@
+﻿Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe assembly.
+Committing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe assembly.
+Remove InstallState file because there are no installers.
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Rolling back assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing service Service1...
+Creating EventLog source Service1 in log Application...
+Rolling back assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Restoring event log to previous state for source Service1.
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing service Service1...
+Creating EventLog source Service1 in log Application...
+Rolling back assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Restoring event log to previous state for source Service1.
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Rolling back assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Attempt to stop service Service1.
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Warning: The source Service1 is not registered on the local machine.
+Service Service1 is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Warning: The source Service1 is not registered on the local machine.
+Service Service1 is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Installing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Uninstalling assembly 'C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.InstallLog
+   assemblypath = C:\Users\yunior.alvarez\source\repos\ArticulateADService\ArticulateADService\bin\Release\ArticulateADService.exe
+Removing EventLog source Service1.
+Warning: The source Service1 is not registered on the local machine.
+Service Service1 is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.

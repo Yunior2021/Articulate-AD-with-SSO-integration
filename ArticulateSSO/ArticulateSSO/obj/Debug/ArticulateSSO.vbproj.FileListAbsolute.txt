@@ -1,0 +1,8 @@
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\bin\ArticulateSSO.dll.config
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\bin\ArticulateSSO.dll
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\bin\ArticulateSSO.pdb
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Debug\ArticulateSSO.Resources.resources
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Debug\ArticulateSSO.vbproj.GenerateResource.cache
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Debug\ArticulateSSO.vbproj.CoreCompileInputs.cache
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Debug\ArticulateSSO.dll
+C:\Users\yunior.alvarez\source\repos\ArticulateSSO\ArticulateSSO\obj\Debug\ArticulateSSO.pdb
